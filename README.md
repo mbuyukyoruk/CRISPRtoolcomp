@@ -33,7 +33,7 @@ Example Dataframe for the demo_CRISPR_list.txt file (tab separated excel file is
 
 A .clstr file will be generated to report the clusters of common CRISPRs detected from different software. Additionally, .log file will be generated to report unique occurences of each CRISPR arrays and first occurences in any given detection tool (lines with '*' in the .clstr file).
 
-The format of .clst file will look like:
+The format of .clstr file will look like:
 
     (Accession) (Start) (Stop)  (Tool)          ...     (Cluster_id)    (Similarity)        ...     (Coverage)
     NC_000853.1 412     3106    CRISPRDetect    ...	    1	            *
@@ -51,6 +51,8 @@ The format of .clst file will look like:
     NC_000853.1 1779875 1780702 CRISPRDetect    ...	    7	            0.9270482603815937	...	0.9987908101571947
 
 Finally, a venn diagram will be generated if the input file contains data from a maximum of 4 unique CRISPR detection tools.
+
+![Venn_diagram_example](https://github.com/mbuyukyoruk/CRISPRtoolcomp/blob/main/demo_CRISPR_hits_venn.png)
 
 R is required to generate plots with various CRAN packages (i.e., ggvenn and its depencencies). 
 The R script is generated to install CRAN packages if they were not available in the system, 
