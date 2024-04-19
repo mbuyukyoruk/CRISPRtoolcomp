@@ -3,10 +3,15 @@ import os
 import sys
 import subprocess
 import multiprocessing
-import pandas as pd
 import uuid
 import time
 import textwrap
+
+try:
+    import pandas as pd
+except:
+    print("Pandas module is not installed! Please install Pandas and try again.")
+    sys.exit()
 
 try:
     import tqdm
@@ -265,3 +270,4 @@ if __name__ == '__main__':
     else:
         print("Input file contains " + str(n_tool) + " unique CRISPR detection tools! Venn diagram only supports four or less tools at the same time. Skipping venn diagram step!")
 
+    os.system("rm " + tmp)
